@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap');
+
+.toggle input[type='checkbox'] {
+    display: none;
+}
+
+.toggle label {
+    background-color: rgb(238, 225, 225);
+    border-radius: 50px;
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    -webkit-transition: .4s;
+    transition: .4s;
+    width: 100px;
+    height: 50px;
+}
+.toggle label::after {
+    content: url(sun-line.svg);
+    
+    /* Add in the image. You could also add an icon by the using the icon's unicode (sites like fontawesome.com provide this). */
+    width: 40px;
+    height: 40px;
+    /* Making the icon slightly taller than the button container. */
+    background-color: #e03c3c;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    place-content: center;
+    cursor: pointer;
+    display: grid;
+    position: absolute;
+    left: 2px;
+    top: 2px;
+    transition: all ease-in-out 0.3s;
+    width: 42px;
+    height: 42px;
+}
+.toggle input[type='checkbox']:checked ~ label {
+    background-color: #c4d7e2;
+    border-color: #a5aeb6;
+}
+
+.toggle input[type='checkbox']:checked ~ label::after {
+    content: url(sun-line.svg);
+    /* Switching the images when clicked. */
+    background-color: #1f257f;
+    transform: translateX(50px) rotate(360deg);
+    transform: translateX(50px);
+}
+body{
+    background-image: url(lightttheme.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+
+}
+h1{
+    color: rgb(26, 25, 25);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 28px;
+}
+.container{
+    background-color: rgb(210, 31, 60);
+    border: 5px solid rgb(253, 253, 253);
+    border-radius: 15px;
+    position: absolute;
+    text-align: center;
+    margin-top: 40px;
+    left: 30%;
+    width: 430px;
+    height: 500px;
+}
+table{
+    margin: auto;
+}
+input{
+    font-size: 25px;
+    border-radius: 15px;
+    background-color: rgb(247, 247, 247);
+    
+    
+}
+button{
+    border-radius: 21px;
+    font-weight: bold;
+    font-size: 40px;
+    position: relative;
+    width: 75px;
+    height: 70px;
+    color: rgb(41, 39, 39);
+    background-color: rgb(224, 222, 235);
+    padding: auto;
+  
+}
+.container,button{
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    background-color: rgba(235, 237, 241, 0.75);
+    border: 1px solid rgba(34, 33, 33, 0.125);
+}
